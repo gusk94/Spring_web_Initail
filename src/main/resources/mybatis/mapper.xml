@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper">
+    <select id="selectUser" resultType="com.signin.data.User">
+        SELECT userId, userPwd, userNickname, userPhone
+        FROM userinfo
+        WHERE userId = #{userId};
+    </select>
+
+    <insert id="insertUser">
+        INSERT INTO userinfo(userId, userPwd, userNickname, userPhone)
+        VALUES(#{userId}, #{userPwd}, #{userNickname}, #{userPhone});
+    </insert>
+
+    <delete id="deleteUser">
+        DELETE FROM userinfo
+        WHERE userId = #{userId};
+    </delete>
+
+    <update id="updateUser" parameterType="com.signin.data.User">
+        UPDATE userinfo
+        SET userId = #{userId}, userPwd = #{userPwd}, userNickname = #{userNickname}, userPhone = #{userPhone}
+        WHERE userId = #{userId}
+    </update>
+
+    <!--<update id="updateIsComplete" parameterType="Integer">-->
+        <!--UPDATE todotable-->
+        <!--SET isComplete = #{isComplete}-->
+        <!--WHERE todoNo = #{todoNo}-->
+    <!--</update>-->
+</mapper>

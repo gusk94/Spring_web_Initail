@@ -1,16 +1,12 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 2019-09-21
-  Time: 오후 5:33
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>Index</title>
-  </head>
-  <body>
-  <h1>Hello World</h1>
-  </body>
+<body>
+<h2>Hello World!</h2>
+
+UserID: <input type="text" id="userId" /><br/>
+UserPassword: <input type="password" id="userPwd"/><br/>
+<input type="button" value="SignIn" id="signInBtn">
+<a href="/signup">SignUp</a>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/resources/js/index.js"></script>
+</body>
 </html>
